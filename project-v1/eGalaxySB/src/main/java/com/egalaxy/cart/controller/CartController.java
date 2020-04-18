@@ -28,9 +28,15 @@ public class CartController {
 	@Autowired
 	private CartService cartService;
 	
+	
 	@GetMapping(value = "/carts")
 	public List<Cart> getUsers(){
 		return cartService.getAllCarts();
+	}
+	
+	@GetMapping(value = "/orders")
+	public List<Order> getOrders(){
+		return cartService.getAllOrders();
 	}
 	
 	@PostMapping(value = "/carts")

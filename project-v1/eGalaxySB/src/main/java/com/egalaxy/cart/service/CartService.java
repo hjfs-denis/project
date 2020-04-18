@@ -14,5 +14,6 @@ public interface CartService {
 	Optional<Cart> getCartById(int cartId);
 	Map<String, Boolean> deleteCart(Cart cart);
 	public Order addOrder(Order order);
+	public List<Order> getAllOrders();
 
 }

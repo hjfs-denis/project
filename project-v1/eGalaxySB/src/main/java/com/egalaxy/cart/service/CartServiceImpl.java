@@ -54,6 +54,11 @@ public class CartServiceImpl implements CartService {
 		return orderRepository.save(order);
 	}
 
+	@Override
+	public List<Order> getAllOrders() {
+		return orderRepository.findAll();
+	}
+
 
 
 }
