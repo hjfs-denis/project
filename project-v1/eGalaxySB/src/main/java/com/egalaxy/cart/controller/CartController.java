@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.egalaxy.cart.entity.Cart;
+import com.egalaxy.cart.entity.Order;
 import com.egalaxy.cart.service.CartService;
 import com.egalaxy.user.exception.ResourceNotFoundException;
 
@@ -37,6 +38,11 @@ public class CartController {
 		cartService.addCart(cart);
 	}
 
+	@PostMapping(value = "/orders")
+	public void addOrder(@RequestBody Order order) {
+		cartService.addOrder(order);
+	}
+	
 	@GetMapping(value = "/carts/{id}")
 	  public ResponseEntity<Cart> getCartById(@PathVariable(value = "id") int cartId)
 	      throws ResourceNotFoundException {

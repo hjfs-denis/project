@@ -10,13 +10,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.egalaxy.cart.entity.Cart;
+import com.egalaxy.cart.entity.Order;
 import com.egalaxy.cart.repository.CartRepository;
+import com.egalaxy.cart.repository.OrderRepository;
 
 @Service
 public class CartServiceImpl implements CartService {
 	
 	@Autowired
 	private CartRepository cartRepository;
+	
+	@Autowired
+	private OrderRepository orderRepository;
 
 	@Override
 	@Transactional
@@ -41,6 +46,12 @@ public class CartServiceImpl implements CartService {
 	public Map<String, Boolean> deleteCart(Cart cart) {
 		 cartRepository.delete(cart);
 		 return null;
+	}
+
+	@Override
+	@Transactional
+	public Order addOrder(Order order) {
+		return orderRepository.save(order);
 	}
 
 
