@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { AddCartComponent } from './add-cart/add-cart.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     AddUserComponent,
     UserListComponent,
     UpdateUserComponent,
+    AddCartComponent,
   ],
   imports: [
     BrowserModule,
