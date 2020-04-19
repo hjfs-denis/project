@@ -8,6 +8,7 @@ import { CreateCourseComponent } from './course/create-course/create-course.comp
 import { UpdateCourseComponent } from './course/update-course/update-course.component';
 import { CourseDetailsComponent } from './course/course-details/course-details.component';
 import { CartListComponent } from './cart/cart-list/cart-list.component';
+import { OrderListComponent } from './cart/order-list/order-list.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'eGalaxy/users/register', pathMatch: 'full' },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: "eGalaxy/courses/details/:id", component: CourseDetailsComponent },
 
   { path: "eGalaxy/carts", component: CartListComponent },
-  { path: "eGalaxy/carts/:id", component: CartListComponent }
+  { path: "eGalaxy/carts/:id", component: CartListComponent },
+  { path: "eGalaxy/orders", component: OrderListComponent }
 ];
 
 @NgModule({

@@ -19,7 +19,7 @@ export class OrderService {
     }
 
 
-    getCartsList(): Observable<any> {
+    getOrdersList(): Observable<any> {
         return this.http.get(`${this.url}`);
     }
 }
