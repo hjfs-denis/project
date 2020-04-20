@@ -43,7 +43,7 @@ export class UserListComponent implements OnInit {
   }
 
   register() {
-    this.router.navigate(['/add']);
+    this.router.navigate(['eGalaxy/courses']);
   }
 
 }

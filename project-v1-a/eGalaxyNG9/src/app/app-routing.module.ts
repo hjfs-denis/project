@@ -9,12 +9,14 @@ import { UpdateCourseComponent } from './course/update-course/update-course.comp
 import { CourseDetailsComponent } from './course/course-details/course-details.component';
 import { CartListComponent } from './cart/cart-list/cart-list.component';
 import { OrderListComponent } from './cart/order-list/order-list.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'eGalaxy/users/register', pathMatch: 'full' },
   { path: 'eGalaxy/users/register', component: AddUserComponent },
   { path: 'eGalaxy/users/list', component: UserListComponent },
   { path: 'eGalaxy/users/update/:id', component: UpdateUserComponent },
+  { path: 'eGalaxy/users/login', component: UserLoginComponent },
 
   { path: "eGalaxy/courses", component: CourseListComponent },
   { path: "eGalaxy/courses/add", component: CreateCourseComponent },

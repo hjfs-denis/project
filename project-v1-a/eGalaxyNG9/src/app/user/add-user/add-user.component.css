@@ -20,3 +20,7 @@ h3,h5 {
     margin-top: 7rem;
     margin-left: 0;
 }
+
+.img-responsive {
+    margin-left: -8rem;
+}

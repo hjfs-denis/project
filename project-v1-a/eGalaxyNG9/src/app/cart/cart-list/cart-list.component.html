@@ -1,51 +1,91 @@
-<div class="container text-center mt-5 mb-5">
-    <h2 class="mb-5">Cart List</h2>
+<div class="container">
+    <div class="row">
 
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">View Cart</button>
-
-
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h4 class="modal-title">Cart</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center mb-5 text-warning">My Account</h2>
+                    <hr>
                 </div>
-                <div class="modal-body">
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <h3 class="order mr-5 mb-3 mt-3">My Cart</h3>
 
-                    <table class="table table-striped table-hover table-dark">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th>Course Desc</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let cart of carts | async">
-                                <td>{{cart.courseName}}</td>
-                                <td>{{cart.courseId}}</td>
-                                <td>{{cart.courseDescription}}</td>
-                                <td><button (click)="deleteCart(cart.cartId)" class="btn btn-danger">Delete</button>
-                                <td><button (click)="cartDetails(cart.cartId)" class="btn btn-success">Purchase</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-
+                    <p>By clicking My Cart, you can view the list of courses available in your cart. </p>
                 </div>
-                <div class="modal-footer mt-4 mb-3">
-                    <h6>We can delete or purchase courses here!</h6>
+                <div class="col-md-4  text-center">
+                    <button type="button" data-toggle="modal" data-target="#myModal"
+                        class="btn btn-primary btn-md back-btn mt-4">View Cart</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <h3 class="order mr-5 mb-3 mt-3">My Orders</h3>
+                    <p>Under Orders, we can get the history of courses purchased and also details of the courses.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <button (click)="gotoOrders()" class="btn btn-primary btn-md back-btn mt-4">Orders</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <h4 class="order mr-5 mt-3 mb-3"> Back to Courses</h4>
+                </div>
+                <div class="col-md-4 text-center">
+                    <button (click)="gotoCourses()" class="btn btn-primary btn-md back-btn mt-3">Back to List</button>
                 </div>
             </div>
 
         </div>
-
+        <div class="col-md-3"></div>
     </div>
 
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title">Cart</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+
+                <table class="table table-striped table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Course Desc</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let cart of carts | async">
+                            <td>{{cart.courseName}}</td>
+                            <td>{{cart.courseId}}</td>
+                            <td>{{cart.courseDescription}}</td>
+                            <td><button (click)="deleteCart(cart.cartId)" class="btn btn-danger">Delete</button>
+                            <td><button (click)="cartDetails(cart.cartId)" data-dismiss="modal"
+                                    class="btn btn-success">Purchase</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+            <div class="modal-footer mt-4 mb-3">
+                <h6>We can delete or purchase courses here!</h6>
+            </div>
+        </div>
+
+    </div>
 
 </div>

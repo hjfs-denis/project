@@ -31,3 +31,11 @@
     color: black;
     border-radius: 50%;
 }
+
+.order {
+    display: inline-block;
+}
+
+.level {
+    margin-left: 4rem;
+}

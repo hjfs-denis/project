@@ -18,6 +18,7 @@ import { CourseDetailsComponent } from './course/course-details/course-details.c
 import { UpdateCourseComponent } from './course/update-course/update-course.component';
 import { CartListComponent } from './cart/cart-list/cart-list.component';
 import { OrderListComponent } from './cart/order-list/order-list.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { OrderListComponent } from './cart/order-list/order-list.component';
     CourseDetailsComponent,
     UpdateCourseComponent,
     CartListComponent,
-    OrderListComponent
+    OrderListComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,

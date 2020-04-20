@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" style="border: 1px solid white; padding: 2rem 3rem;">
+            <h2 class="text-center mb-4 text-secondary">Login</h2>
+            <hr>
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="userName">User Name</label>
+                    <input type="text" class="form-control" id="userName" required [(ngModel)]="user.userName"
+                        name="userName">
+                </div>
+                <div class="form-group">
+                    <label for="userPassword">Password</label>
+                    <input type="text" class="form-control" id="userPassword" required [(ngModel)]="user.userPassword"
+                        name="userPassword">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success mt-3 mb-3 form-control">Submit</button>
+                </div>
+
+                <hr>
+                <p>New User ?
+                    <button (click)="goToRegister()" class="btn btn-sm btn-primary">Register Here!</button></p>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
